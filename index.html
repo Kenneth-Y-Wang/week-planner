@@ -4,9 +4,769 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week Planner</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="container">
+    <div class="wholePage">
+      <div class="modalHolder hidden">
+        <form class= "entryBlock">
+          <h1>Update Entry</h1>
+          <div class="row justify-evenly">
+            <select name="day" id="day">
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+              <option value="sunday">Sunday</option>
+            </select>
+            <select name="time" id="time">
+              <option value="8:00">8:00</option>
+              <option value="9:00">9:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+              <option value="19:00">19:00</option>
+              <option value="20:00">20:00</option>
+              <option value="21:00">21:00</option>
+              <option value="22:00">22:00</option>
+              <option value="23:00">23:00</option>
+              <option value="24:00">24:00</option>
+            </select>
+          </div>
+          <div>
+            <textarea rows="7" id="text-input" placeholder="Enter text here"></textarea>
+          </div>
+          <div class="row justify-between">
+            <button class="cancel-button">Cancel</button>
+            <button class="submit-button" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    <div class="row justify-center text-center">
+      <h1>Weekly Planner</h1>
+    </div>
+    <div class="row justify-center justify-evenly">
+      <button data-view="sunday" class="sunday">Sunday</button>
+      <button data-view="monday" class="monday">Monday</button>
+      <button data-view="tuesday" class="tuesday">Tuesday</button>
+      <button data-view="wednesday" class="wednesday">Wednesday</button>
+      <button data-view="thursday" class="thursday">Thursday</button>
+      <button data-view="friday" class="friday">Friday</button>
+      <button data-view="saturday" class="saturday">Saturday</button>
+    </div> <!--End of buttons container-->
+    <div class="row justify-center">
+      <button class="entryButton create">Add Entry</button>
+    </div>
+     <!-- start the table -->
+     <div class="table" data-view="monday">
+      <div class="row justify-center">
+        <h3>Scheduled Events for Monday</h3>
+      </div>
+      <div class="row">
+        <table class="table-time">
+          <thead>
+            <tr>
+              <th>
+                Time
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+              <tr>
+                <td>
+                  10:00
+                </td>
+              </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table-text">
+          <thead>
+            <tr>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+     </div>
+<!-- end of table - monday -->
+    <div class="table hidden" data-view="tuesday">
+      <div class="row justify-center">
+        <h3>Scheduled Events for Tuesday</h3>
+      </div>
+      <div class="row">
+        <table class="table-time">
+          <thead>
+            <tr>
+              <th>
+                Time
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table-text">
+          <thead>
+            <tr>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+<!-- end of table - tuesday -->
+    <div class="table hidden" data-view="wednesday">
+      <div class="row justify-center">
+        <h3>Scheduled Events for Wednesday</h3>
+      </div>
+      <div class="row">
+        <table class="table-time">
+          <thead>
+            <tr>
+              <th>
+                Time
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table-text">
+          <thead>
+            <tr>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <!-- end of table - wednesday -->
+    <div class="table hidden" data-view="thursday">
+      <div class="row justify-center">
+        <h3>Scheduled Events for Thursday</h3>
+      </div>
+      <div class="row">
+        <table class="table-time">
+          <thead>
+            <tr>
+              <th>
+                Time
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table-text">
+          <thead>
+            <tr>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <!-- end of table - thursday -->
+        <div class="table hidden" data-view="friday">
+          <div class="row justify-center">
+            <h3>Scheduled Events for Friday</h3>
+          </div>
+          <div class="row">
+            <table class="table-time">
+              <thead>
+                <tr>
+                  <th>
+                    Time
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    10:00
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    10:00
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    10:00
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    10:00
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    10:00
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    10:00
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    10:00
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table-text">
+              <thead>
+                <tr>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Go to school
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Go to school
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Go to school
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Go to school
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Go to school
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Go to school
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Go to school
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <!-- end of table - friday -->
+      <div class="table hidden" data-view="saturday">
+        <div class="row justify-center">
+          <h3>Schedule Events for Saturday</h3>
+        </div>
+        <div class="row">
+          <table class="table-time">
+            <thead>
+              <tr>
+                <th>
+                  Time
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  10:00
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  10:00
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  10:00
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  10:00
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  10:00
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  10:00
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  10:00
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table-text">
+            <thead>
+              <tr>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Go to school
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Go to school
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Go to school
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Go to school
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Go to school
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Go to school
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Go to school
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <!-- end of table - saturday -->
+    <div class="table hidden" data-view="sunday">
+      <div class="row justify-center">
+        <h3>Scheduled Events for Sunday</h3>
+      </div>
+      <div class="row">
+        <table class="table-time">
+          <thead>
+            <tr>
+              <th>
+                Time
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+            <tr>
+              <td>
+                10:00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table-text">
+          <thead>
+            <tr>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Go to school
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+
   <script src="main.js"></script>
+  <script src="data.js"></script>
 </body>
 </html>
