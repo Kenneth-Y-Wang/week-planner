@@ -57,13 +57,13 @@
       <h1>Weekly Planner</h1>
     </div>
     <div class="row justify-center justify-evenly">
-      <button data-view="sunday" class="sunday">Sunday</button>
-      <button data-view="monday" class="monday">Monday</button>
-      <button data-view="tuesday" class="tuesday">Tuesday</button>
-      <button data-view="wednesday" class="wednesday">Wednesday</button>
-      <button data-view="thursday" class="thursday">Thursday</button>
-      <button data-view="friday" class="friday">Friday</button>
-      <button data-view="saturday" class="saturday">Saturday</button>
+      <button data-view="sunday" class="dateButton sunday">Sunday</button>
+      <button data-view="monday" class="dateButton monday">Monday</button>
+      <button data-view="tuesday" class="dateButton tuesday">Tuesday</button>
+      <button data-view="wednesday" class="dateButton wednesday">Wednesday</button>
+      <button data-view="thursday" class="dateButton thursday">Thursday</button>
+      <button data-view="friday" class="dateButton friday">Friday</button>
+      <button data-view="saturday" class="dateButton saturday">Saturday</button>
     </div> <!--End of buttons container-->
     <div class="row justify-center">
       <button class="entryButton create">Add Entry</button>
@@ -82,7 +82,7 @@
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="monday-time" >
             <tr>
               <td>
                 10:00
@@ -126,10 +126,16 @@
               <th>Description</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="monday-description">
             <tr>
               <td>
-                Go to school
+                <div class="eventRow space-between">
+                  <div class="column-one-third textRow" >Go to school</div>
+                  <div class="column-one-third buttonHolder space-between">
+                    <button class="delete">Delete</button>
+                    <button class="edit">Edit</button>
+                  </div>
+                </div>
               </td>
             </tr>
             <tr>
@@ -181,7 +187,7 @@
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="tuesday-time">
             <tr>
               <td>
                 10:00
@@ -225,7 +231,7 @@
               <th>Description</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="tuesday-description">
             <tr>
               <td>
                 Go to school
@@ -280,7 +286,7 @@
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="wednesday-time">
             <tr>
               <td>
                 10:00
@@ -324,7 +330,7 @@
               <th>Description</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="wednesday-description">
             <tr>
               <td>
                 Go to school
@@ -379,7 +385,7 @@
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="thursday-time">
             <tr>
               <td>
                 10:00
@@ -423,7 +429,7 @@
               <th>Description</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="thursday-description">
             <tr>
               <td>
                 Go to school
@@ -478,7 +484,7 @@
                   </th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="friday-time">
                 <tr>
                   <td>
                     10:00
@@ -522,7 +528,7 @@
                   <th>Description</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="friday-description">
                 <tr>
                   <td>
                     Go to school
@@ -577,7 +583,7 @@
                 </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="saturday-time">
               <tr>
                 <td>
                   10:00
@@ -621,7 +627,7 @@
                 <th>Description</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="saturday-description">
               <tr>
                 <td>
                   Go to school
@@ -676,7 +682,7 @@
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="sunday-time">
             <tr>
               <td>
                 10:00
@@ -720,7 +726,7 @@
               <th>Description</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="sunday-description">
             <tr>
               <td>
                 Go to school

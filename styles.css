@@ -34,18 +34,27 @@
   font-weight: 500;
 }
 
-.buttonHolder {
+.buttonHolder,
+.eventRow {
   display: flex;
-  justify-content: space-between;
+  padding: 0.25rem;
 }
 
-.cancel {
+.delete {
   background-color: #bcb8b1;
   color: black;
+  padding: 0.1rem 0.1rem;
+  font-size: 1rem;
+  width: 80px;
+  height: 20px;
 }
 
-.confirm {
+.edit {
   background-color: #ee6055;
+  padding: 0.1rem 0.1rem;
+  font-size: 1rem;
+  width: 80px;
+  height: 20px;
 }
 
 #searchEntry {
@@ -179,12 +188,22 @@ button {
   font-size: 1rem;
   border-radius: 0.25rem;
   border: none;
-  color: #f2f2f2;
-  background-color: #562b81;
+  background-color: #364156;
   cursor: pointer;
   font-family: 'Proza Libre', sans-serif;
   width: 125px;
   text-align: center;
+  color: white;
+  transition-duration: 0.5s;
+  box-shadow: 5px 5px 11px -5px rgba(17, 2, 16, 0.78);
+}
+
+.dateButton {
+  height: 80px;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 .entryButton {
@@ -373,6 +392,10 @@ td {
   padding-left: 1rem;
 }
 
+tr {
+  height: 40px;
+}
+
 thead {
   background-color: black;
   color: white;
@@ -380,4 +403,10 @@ thead {
 
 tr:nth-child(even) {
   background-color: gray;
+}
+
+.textRow {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
 }
