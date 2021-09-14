@@ -1,18 +1,26 @@
 /* exported data */
 
-var data = {
-  view: 'entry-form',
-  entries: [],
-  editing: null,
-  nextEntryId: 1
-};
+var dataMonday = [];
+var dataTuesday = [];
+var dataWednesday = [];
+var dataThursday = [];
+var dataFriday = [];
+var dataSaturday = [];
+var dataSunday = [];
 
-var previousDataJSON = localStorage.getItem('data-local-storage');
-if (previousDataJSON !== null) {
-  data = JSON.parse(previousDataJSON);
+var previousMondayJSON = localStorage.getItem('data-monday-storage');
+if (previousMondayJSON !== null) {
+  dataMonday = JSON.parse(previousMondayJSON);
+}
+var previousTuesdayJSON = localStorage.getItem('data-tuesday-storage');
+if (previousTuesdayJSON !== null) {
+  dataTuesday = JSON.parse(previousTuesdayJSON);
 }
 
 window.addEventListener('beforeunload', function () {
-  var dataJSON = JSON.stringify(data);
-  localStorage.setItem('data-local-storage', dataJSON);
+  var mondayJSON = JSON.stringify(dataMonday);
+  var tuesdayJSON = JSON.stringify(dataTuesday);
+  localStorage.setItem('data-monday-storage', mondayJSON);
+  localStorage.setItem('data-tuesday-storage', tuesdayJSON);
+
 });

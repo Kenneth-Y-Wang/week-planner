@@ -51,6 +51,21 @@ var $time = document.querySelector('#time');
 var $day = document.querySelector('#day');
 var $textArea = document.querySelector('textarea');
 
+var $timeMonday = document.querySelector('.monday-time');
+var $descriptionMonday = document.querySelector('.monday-description');
+var $timeTuesday = document.querySelector('.tuesday-time');
+var $descriptionTuesday = document.querySelector('.tuesday-description');
+var $timeWednesday = document.querySelector('.wednesday-time');
+var $descriptionWednesday = document.querySelector('.wednesday-description');
+var $timeThursday = document.querySelector('.thursday-time');
+var $descriptionThursday = document.querySelector('.thursday-description');
+var $timeFriday = document.querySelector('.friday-time');
+var $descriptionFriday = document.querySelector('.friday-description');
+var $timeSaturday = document.querySelector('.saturday-time');
+var $descriptionSaturday = document.querySelector('.saturday-description');
+var $timeSunday = document.querySelector('.sunday-time');
+var $descriptionSunday = document.querySelector('.sunday-description');
+
 $form.addEventListener('submit', function () {
   event.preventDefault();
   var entryData = {
@@ -58,6 +73,44 @@ $form.addEventListener('submit', function () {
     day: $day.value,
     description: $textArea.value
   };
+  if (entryData.day === 'monday') {
+    $timeMonday.appendChild(timeDom(entryData));
+    $descriptionMonday.appendChild(descriptionDom(entryData));
+    dataMonday.push(entryData);
+  }
+  if (entryData.day === 'tuesday') {
+    $timeTuesday.appendChild(timeDom(entryData));
+    $descriptionTuesday.appendChild(descriptionDom(entryData));
+    dataTuesday.push(entryData);
+  }
+  if (entryData.day === 'wednesday') {
+    $timeWednesday.appendChild(timeDom(entryData));
+    $descriptionWednesday.appendChild(descriptionDom(entryData));
+    dataWednesday.push(entryData);
+  }
+  if (entryData.day === 'thursday') {
+    $timeThursday.appendChild(timeDom(entryData));
+    $descriptionThursday.appendChild(descriptionDom(entryData));
+    dataThursday.push(entryData);
+  }
+  if (entryData.day === 'friday') {
+    $timeFriday.appendChild(timeDom(entryData));
+    $descriptionFriday.appendChild(descriptionDom(entryData));
+    dataFriday.push(entryData);
+  }
+  if (entryData.day === 'saturday') {
+    $timeSaturday.appendChild(timeDom(entryData));
+    $descriptionSaturday.appendChild(descriptionDom(entryData));
+    dataSaturday.push(entryData);
+  }
+  if (entryData.day === 'sunday') {
+    $timeSunday.appendChild(timeDom(entryData));
+    $descriptionSunday.appendChild(descriptionDom(entryData));
+    dataSunday.push(entryData);
+  }
+
+  modalHolder.className = 'hidden modalHolder';
+  $form.reset();
 });
 
 //= ============ render function
@@ -122,3 +175,56 @@ function descriptionDom(entry) {
   return $tr;
 
 }
+
+function entryDisplay(event) {
+  for (var i = 0; i < dataMonday.length; i++) {
+    var $mondayTime = timeDom(dataMonday[i]);
+    var $mondayDis = descriptionDom(dataMonday[i]);
+    $timeMonday.appendChild($mondayTime);
+    $descriptionMonday.appendChild($mondayDis);
+
+  }
+  for (var j = 0; j < dataTuesday.length; j++) {
+    var $tuesdayTime = timeDom(dataTuesday[j]);
+    var $tuesdayDis = descriptionDom(dataTuesday[j]);
+    $timeTuesday.appendChild($tuesdayTime);
+    $descriptionTuesday.appendChild($tuesdayDis);
+
+  }
+  // for (var i = 0; i < dataMonday.length; i++) {
+  //   var $mondayTime = timeDom(dataMonday[i]);
+  //   var $mondayDis = descriptionDom(dataMonday[i]);
+  //   $timeMonday.appendChild($mondayTime);
+  //   $descriptionMonday.appendChild($mondayDis);
+
+  // }
+  // for (var i = 0; i < dataMonday.length; i++) {
+  //   var $mondayTime = timeDom(dataMonday[i]);
+  //   var $mondayDis = descriptionDom(dataMonday[i]);
+  //   $timeMonday.appendChild($mondayTime);
+  //   $descriptionMonday.appendChild($mondayDis);
+
+  // }
+  // for (var i = 0; i < dataMonday.length; i++) {
+  //   var $mondayTime = timeDom(dataMonday[i]);
+  //   var $mondayDis = descriptionDom(dataMonday[i]);
+  //   $timeMonday.appendChild($mondayTime);
+  //   $descriptionMonday.appendChild($mondayDis);
+
+  // }
+  // for (var i = 0; i < dataMonday.length; i++) {
+  //   var $mondayTime = timeDom(dataMonday[i]);
+  //   var $mondayDis = descriptionDom(dataMonday[i]);
+  //   $timeMonday.appendChild($mondayTime);
+  //   $descriptionMonday.appendChild($mondayDis);
+
+  // }
+  // for (var i = 0; i < dataMonday.length; i++) {
+  //   var $mondayTime = timeDom(dataMonday[i]);
+  //   var $mondayDis = descriptionDom(dataMonday[i]);
+  //   $timeMonday.appendChild($mondayTime);
+  //   $descriptionMonday.appendChild($mondayDis);
+
+}
+
+document.addEventListener('DOMContentLoaded', entryDisplay);

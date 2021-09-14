@@ -202,7 +202,7 @@ button {
   height: 80px;
 }
 
-button:hover {
+button:hover:not(.entryButton) {
   transform: scale(1.1);
 }
 
@@ -393,7 +393,7 @@ td {
 }
 
 tr {
-  height: 40px;
+  height: 50px;
 }
 
 thead {
@@ -409,4 +409,8 @@ tr:nth-child(even) {
   display: flex;
   align-items: center;
   padding-left: 0;
+}
+
+.title-row {
+  margin-top: 0;
 }
