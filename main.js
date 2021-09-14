@@ -155,7 +155,7 @@ function descriptionDom(entry) {
   $textRow.textContent = entry.description;
 
   var $buttonHolder = document.createElement('div');
-  $buttonHolder.setAttribute('class', 'column-one-third buttonHolder space-between');
+  $buttonHolder.setAttribute('class', 'column-one-third buttonHolder justify-evenly');
 
   var $delete = document.createElement('button');
   $delete.setAttribute('class', 'delete');
@@ -191,40 +191,40 @@ function entryDisplay(event) {
     $descriptionTuesday.appendChild($tuesdayDis);
 
   }
-  // for (var i = 0; i < dataMonday.length; i++) {
-  //   var $mondayTime = timeDom(dataMonday[i]);
-  //   var $mondayDis = descriptionDom(dataMonday[i]);
-  //   $timeMonday.appendChild($mondayTime);
-  //   $descriptionMonday.appendChild($mondayDis);
+  for (var k = 0; k < dataWednesday.length; k++) {
+    var $wednesdayTime = timeDom(dataWednesday[k]);
+    var $wednesdayDis = descriptionDom(dataWednesday[k]);
+    $timeWednesday.appendChild($wednesdayTime);
+    $descriptionWednesday.appendChild($wednesdayDis);
 
-  // }
-  // for (var i = 0; i < dataMonday.length; i++) {
-  //   var $mondayTime = timeDom(dataMonday[i]);
-  //   var $mondayDis = descriptionDom(dataMonday[i]);
-  //   $timeMonday.appendChild($mondayTime);
-  //   $descriptionMonday.appendChild($mondayDis);
+  }
+  for (var l = 0; l < dataThursday.length; l++) {
+    var $thursdayTime = timeDom(dataThursday[l]);
+    var $thursdayDis = descriptionDom(dataThursday[l]);
+    $timeThursday.appendChild($thursdayTime);
+    $descriptionThursday.appendChild($thursdayDis);
 
-  // }
-  // for (var i = 0; i < dataMonday.length; i++) {
-  //   var $mondayTime = timeDom(dataMonday[i]);
-  //   var $mondayDis = descriptionDom(dataMonday[i]);
-  //   $timeMonday.appendChild($mondayTime);
-  //   $descriptionMonday.appendChild($mondayDis);
+  }
+  for (var m = 0; m < dataFriday.length; m++) {
+    var $fridayTime = timeDom(dataFriday[m]);
+    var $fridayDis = descriptionDom(dataFriday[m]);
+    $timeFriday.appendChild($fridayTime);
+    $descriptionFriday.appendChild($fridayDis);
 
-  // }
-  // for (var i = 0; i < dataMonday.length; i++) {
-  //   var $mondayTime = timeDom(dataMonday[i]);
-  //   var $mondayDis = descriptionDom(dataMonday[i]);
-  //   $timeMonday.appendChild($mondayTime);
-  //   $descriptionMonday.appendChild($mondayDis);
+  }
+  for (var n = 0; n < dataSaturday.length; n++) {
+    var $saturdayTime = timeDom(dataSaturday[n]);
+    var $saturdayDis = descriptionDom(dataSaturday[n]);
+    $timeSaturday.appendChild($saturdayTime);
+    $descriptionSaturday.appendChild($saturdayDis);
 
-  // }
-  // for (var i = 0; i < dataMonday.length; i++) {
-  //   var $mondayTime = timeDom(dataMonday[i]);
-  //   var $mondayDis = descriptionDom(dataMonday[i]);
-  //   $timeMonday.appendChild($mondayTime);
-  //   $descriptionMonday.appendChild($mondayDis);
+  }
+  for (var o = 0; o < dataSunday.length; o++) {
+    var $sundayTime = timeDom(dataSunday[o]);
+    var $sundayDis = descriptionDom(dataSunday[o]);
+    $timeSunday.appendChild($sundayTime);
+    $descriptionSunday.appendChild($sundayDis);
 
+  }
 }
-
 document.addEventListener('DOMContentLoaded', entryDisplay);
